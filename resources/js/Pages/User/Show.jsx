@@ -1,7 +1,40 @@
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head } from "@inertiajs/react";
-import { USER_STATUS_CLASS_MAP, USER_STATUS_TEXT_MAP } from "@/constants";
+// import { USER_STATUS_CLASS_MAP, USER_STATUS_TEXT_MAP } from "../../constants";
 import TasksTable from "../Task/TasksTable";
+
+export const PROJECT_STATUS_CLASS_MAP = {
+  pending: "bg-amber-500",
+  in_progress: "bg-blue-500 ",
+  completed: "bg-green-500",
+};
+export const PROJECT_STATUS_TEXT_MAP = {
+  pending: "Pending",
+  in_progress: "In Progress",
+  completed: "Completed",
+};
+export const TASK_STATUS_CLASS_MAP = {
+  pending: "bg-amber-500",
+  in_progress: "bg-blue-500",
+  completed: "bg-green-500",
+};
+export const TASK_STATUS_TEXT_MAP = {
+  pending: "Pending",
+  in_progress: "In Progress",
+  completed: "Completed",
+};
+export const TASK_PRIORITY_CLASS_MAP = {
+  low: "bg-gray-600",
+  medium: "bg-amber-600",
+  high: "bg-red-600",
+};
+export const TASK_PRIORITY_TEXT_MAP = {
+  low: "Low",
+  medium: "Medium",
+  high: "High",
+};
+
+
 export default function Show({ auth, user, tasks, queryParams }) {
   return (
     <AuthenticatedLayout
